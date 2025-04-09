@@ -2,7 +2,16 @@ const WebSocket = require('ws');
 const { v4: uuidv4 } = require('uuid');
 const os = require('os'); // Importing the OS module to get IP addresses
 
-const wss = new WebSocket.Server({ port: 8080 });
+const http = require('http');
+const server = http.createServer();
+
+const wss = new WebSocket.Server({ server });
+
+const PORT = process.env.PORT || 8080;
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 console.clear();
 console.log('\n========================================');
 console.log('         ✅ GAME LAUNCHED ✅           ');
