@@ -1,0 +1,13 @@
+{
+  "name": "traellene-server",
+  "version": "1.0.0",
+  "description": "Multiplayer WebSocket server for Traellenes Flugt",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.12.0",
+    "uuid": "^9.0.0"
+  }
+}
